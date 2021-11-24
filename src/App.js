@@ -6,6 +6,23 @@ const mapStyles = {
   height: "100%",
 };
 
+const markers = [
+  {
+    name: 'First',
+    position: {
+      lat: 35.90871,
+      lng: -79.063032,
+    }
+  },
+  {
+    name: 'Second',
+    position: {
+      lat: 35.90171,
+      lng: -79.093032,
+    }
+  }
+]
+
 export class MapContainer extends Component {
   state = {
     showingInfoWindow: false,  // Hides or shows the InfoWindow
@@ -40,24 +57,15 @@ export class MapContainer extends Component {
           lng: -79.063032,
         }}
       >
-        <Marker
-          onClick={this.onMarkerClick}
-          name={'First'}
-          position={{
-            lat: 35.90171,
-            lng: -79.093032,
-          }}
-          icon={"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"}
-        />
-        <Marker
-          onClick={this.onMarkerClick}
-          name={'Second'}
-          position={{
-            lat: 35.90871,
-            lng: -79.063032,
-          }}
-          icon={"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"}
-        />
+        {markers.map((marker, i) => (
+          <Marker
+            key={i}
+            onClick={this.onMarkerClick}
+            name={marker.name}
+            position={marker.position}
+            icon={"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"}
+          />
+        ))}
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
