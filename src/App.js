@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { Typography, Button, AppBar, Toolbar, IconButton, Box, CssBaseline } from '@mui/material';
 import { Menu } from '@mui/icons-material';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
-import { DialogBox } from 'components';
+import { DialogBox, Sidebar } from 'components';
 
 const App = () => {
   const [selected, setSelected] = useState({});
-  const [open, setOpen] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
+  const [openSidebar, setOpenSidebar] = useState(false);
 
   const locations = [
     {
@@ -15,7 +16,8 @@ const App = () => {
         lat: 35.90871,
         lng: -79.063032,
       },
-      info: "Hi"
+      blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
       name: "Location 2",
@@ -23,7 +25,8 @@ const App = () => {
         lat: 35.90171,
         lng: -79.093032,
       },
-      info: "Hello"
+      blurb: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
   ];
 
@@ -39,9 +42,13 @@ const App = () => {
   }
 
   const handleClose = () => {
-    setOpen(false);
+    setOpenDialog(false);
     setSelected({});
   }
+
+  const toggleDrawer = (status) => (event) => {
+    setOpenSidebar(status);
+  };
 
   return (
     <React.Fragment>
@@ -49,7 +56,7 @@ const App = () => {
       <Box sx={{ height: '100vh', width: '100vw', display: 'flex', flexDirection: 'column' }}>
         <AppBar position="static">
           <Toolbar variant="dense">
-            <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+            <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }} onClick={toggleDrawer(true)} >
               <Menu />
             </IconButton>
           </Toolbar>
@@ -82,16 +89,18 @@ const App = () => {
                   clickable={true}
                   onCloseClick={() => setSelected({})}
                 >
-                  <React.Fragment>
-                    <Typography variant="h6">{selected.name}</Typography>
-                    <Button onClick={() => setOpen(true)}>Read More</Button>
-                  </React.Fragment>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', maxWidth: '300px' }}>
+                    <Typography variant="h6" align="center">{selected.name}</Typography>
+                    <Typography align="center">{selected.blurb}</Typography>
+                    <Button onClick={() => setOpenDialog(true)}>Read More</Button>
+                  </Box>
                 </InfoWindow>
               )
             }
           </GoogleMap>
         </LoadScript>
-        <DialogBox handleClose={handleClose} open={open} selected={selected} />
+        <DialogBox handleClose={handleClose} open={openDialog} selected={selected} />
+        <Sidebar locations={locations} open={openSidebar} toggleDrawer={toggleDrawer} setOpenDialog={setOpenDialog} />
       </Box>
     </React.Fragment>
   )

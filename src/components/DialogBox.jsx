@@ -46,7 +46,7 @@ export const DialogBox = withStyles(styles)(
                     </Grid>
                 </DialogTitle>
                 <DialogContent>
-                    <Typography>{selected.info}</Typography>
+                    <Typography>{selected.description}</Typography>
                 </DialogContent>
             </Dialog>
         );
