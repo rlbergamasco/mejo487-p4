@@ -1,85 +1,13 @@
-import React, { Component } from "react";
-import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
+import React, { useState } from 'react';
+import MapContainer from './MapContainer';
 
-const mapStyles = {
-  width: "100%",
-  height: "100%",
-};
+const App = () => {
 
-const markers = [
-  {
-    name: 'First',
-    position: {
-      lat: 35.90871,
-      lng: -79.063032,
-    }
-  },
-  {
-    name: 'Second',
-    position: {
-      lat: 35.90171,
-      lng: -79.093032,
-    }
-  }
-]
-
-export class MapContainer extends Component {
-  state = {
-    showingInfoWindow: false,  // Hides or shows the InfoWindow
-    activeMarker: {},          // Shows the active marker upon click
-    selectedPlace: {}          // Shows the InfoWindow to the selected place upon a marker
-  };
-
-  onMarkerClick = (props, marker, e) =>
-    this.setState({
-      selectedPlace: props,
-      activeMarker: marker,
-      showingInfoWindow: true
-    });
-
-  onClose = props => {
-    if (this.state.showingInfoWindow) {
-      this.setState({
-        showingInfoWindow: false,
-        activeMarker: null
-      });
-    }
-  };
-
-  render() {
-    return (
-      <Map
-        google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={{
-          lat: 35.90871,
-          lng: -79.063032,
-        }}
-      >
-        {markers.map((marker, i) => (
-          <Marker
-            key={i}
-            onClick={this.onMarkerClick}
-            name={marker.name}
-            position={marker.position}
-            icon={"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"}
-          />
-        ))}
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}
-          onClose={this.onClose}
-        >
-          <div>
-            <h4>{this.state.selectedPlace.name}</h4>
-          </div>
-        </InfoWindow>
-      </Map>
-    );
-  }
+  return (
+    <React.Fragment>
+      <MapContainer />
+    </React.Fragment>
+  );
 }
 
-export default GoogleApiWrapper({
-  apiKey: process.env.REACT_APP_API_KEY,
-})(MapContainer);
+export default App;
