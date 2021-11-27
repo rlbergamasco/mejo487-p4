@@ -4,7 +4,7 @@ import {
     DialogContent,
     Grid,
     IconButton,
-    Typography,
+    Typography
 } from "@mui/material";
 import { withStyles } from '@mui/styles';
 import { Close } from "@mui/icons-material";
@@ -25,7 +25,7 @@ const styles = () => ({
 });
 
 export const DialogBox = withStyles(styles)(
-    ({ handleClose, name, open, classes }) => {
+    ({ handleClose, selected, open, classes }) => {
         return (
             <Dialog
                 onClose={handleClose}
@@ -37,7 +37,7 @@ export const DialogBox = withStyles(styles)(
                 <DialogTitle disableTypography className={classes.root}>
                     <Grid container direction="row" alignItems="center">
                         <Grid item display="flex">
-                            {name}
+                            {selected.name}
                         </Grid>
                         <Grid item style={{ display: "flex", flexGrow: 1 }} />
                         <Grid item>
@@ -45,7 +45,9 @@ export const DialogBox = withStyles(styles)(
                         </Grid>
                     </Grid>
                 </DialogTitle>
-                <DialogContent>Contents HERE</DialogContent>
+                <DialogContent>
+                    <Typography>{selected.info}</Typography>
+                </DialogContent>
             </Dialog>
         );
     }

@@ -7,13 +7,14 @@ const MapContainer = () => {
     const [selected, setSelected] = useState({});
     const [open, setOpen] = useState(false);
 
-    const markers = [
+    const locations = [
         {
             name: "Location 1",
             location: {
                 lat: 35.90871,
                 lng: -79.063032,
             },
+            info: "Hi"
         },
         {
             name: "Location 2",
@@ -21,6 +22,7 @@ const MapContainer = () => {
                 lat: 35.90171,
                 lng: -79.093032,
             },
+            info: "Hello"
         },
     ];
 
@@ -49,13 +51,13 @@ const MapContainer = () => {
                     center={defaultCenter}
                 >
                     {
-                        markers.map(marker => {
+                        locations.map(item => {
                             return (
                                 <Marker
-                                    key={marker.name}
-                                    name={marker.name}
-                                    position={marker.location}
-                                    onClick={() => setSelected(marker)}
+                                    key={item.name}
+                                    name={item.name}
+                                    position={item.location}
+                                    onClick={() => setSelected(item)}
                                 // icon={"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"}
                                 />
                             )
@@ -78,7 +80,7 @@ const MapContainer = () => {
                     }
                 </GoogleMap>
             </LoadScript>
-            <DialogBox handleClose={handleClose} open={open} name={selected.name} />
+            <DialogBox handleClose={handleClose} open={open} selected={selected} />
         </React.Fragment>
     )
 }
