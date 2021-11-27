@@ -54,13 +54,11 @@ const App = () => {
     <React.Fragment>
       <CssBaseline />
       <Box sx={{ height: '100vh', width: '100vw', display: 'flex', flexDirection: 'column' }}>
-        <AppBar position="static">
-          <Toolbar variant="dense">
-            <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }} onClick={toggleDrawer(true)} >
-              <Menu />
-            </IconButton>
-          </Toolbar>
-        </AppBar>
+        <Box sx={{ height: '40px', width: '40px', backgroundColor: 'white', position: 'absolute', zIndex: 10, right: 0, margin: '10px' }}>
+          <IconButton onClick={toggleDrawer(true)} >
+            <Menu />
+          </IconButton>
+        </Box>
         <LoadScript
           googleMapsApiKey={process.env.REACT_APP_API_KEY}>
           <GoogleMap
@@ -100,9 +98,9 @@ const App = () => {
           </GoogleMap>
         </LoadScript>
         <DialogBox handleClose={handleClose} open={openDialog} selected={selected} />
-        <Sidebar locations={locations} open={openSidebar} toggleDrawer={toggleDrawer} setOpenDialog={setOpenDialog} />
+        <Sidebar locations={locations} open={openSidebar} toggleDrawer={toggleDrawer} setOpenDialog={setOpenDialog} setSelected={setSelected} />
       </Box>
-    </React.Fragment>
+    </React.Fragment >
   )
 }
 

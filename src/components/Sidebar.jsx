@@ -1,7 +1,12 @@
 import React from 'react';
 import { Box, Drawer, List, Divider, ListItem, Button, Typography } from '@mui/material';
 
-export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog }) => {
+export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog, setSelected }) => {
+
+    const handleClick = (selected) => {
+        setSelected(selected);
+        setOpenDialog(true);
+    }
 
     const list = (
         <Box
@@ -17,7 +22,7 @@ export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog }) => {
                             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                 <Typography variant="h6">{item.name}</Typography>
                                 <Typography>{item.blurb}</Typography>
-                                <Button onClick={() => setOpenDialog(true)}>Read More</Button>
+                                <Button onClick={() => handleClick(item)}>Read More</Button>
                             </Box>
                         </ListItem>
                         {index !== locations.length - 1 ? <Divider /> : null}
@@ -29,7 +34,7 @@ export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog }) => {
 
     return (
         <Drawer
-            anchor='left'
+            anchor='right'
             open={open}
             onClose={toggleDrawer(false)}
         >
