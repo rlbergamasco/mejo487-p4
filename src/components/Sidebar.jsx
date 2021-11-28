@@ -1,11 +1,12 @@
 import React from 'react';
 import { Box, Drawer, List, Divider, ListItem, Link, Typography } from '@mui/material';
 
-export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog, setSelected }) => {
+export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog, setOpenInfo, setSelected }) => {
 
     const handleClick = (selected) => {
         setSelected(selected);
         setOpenDialog(true);
+        setOpenInfo(false);
     }
 
     const list = (
@@ -21,7 +22,7 @@ export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog, setSelec
                             {/* <ListItemText primary={item.name} /> */}
                             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                 <Typography variant="h6">{item.name}</Typography>
-                                <Typography>{item.blurb}</Typography>
+                                <Typography>{item.address}</Typography>
                                 <Link underline="hover" onClick={() => handleClick(item)}>Read More</Link>
                             </Box>
                         </ListItem>

@@ -24,7 +24,7 @@ const styles = () => ({
     },
 });
 
-export const DialogBox = withStyles(styles)(
+export const InfoDialog = withStyles(styles)(
     ({ handleClose, selected, open, classes }) => {
         return (
             <Dialog

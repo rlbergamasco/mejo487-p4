@@ -24,7 +24,7 @@ const styles = () => ({
     },
 });
 
-export const InfoBox = withStyles(styles)(({ handleClose, open, classes }) => {
+export const WelcomeDialog = withStyles(styles)(({ handleClose, open, classes }) => {
     return (
         <Dialog
             onClose={handleClose}

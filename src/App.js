@@ -7,14 +7,15 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-import { InfoBox, DialogBox, Sidebar } from "components";
+import { WelcomeDialog, InfoDialog, Sidebar } from "components";
 import axios from 'axios';
 
 const App = () => {
   const [locations, setLocations] = useState([]);
   const [selected, setSelected] = useState({});
-  const [openInfo, setOpenInfo] = useState(true);
+  const [openWelcome, setOpenWelcome] = useState(true);
   const [openDialog, setOpenDialog] = useState(false);
+  const [openInfo, setOpenInfo] = useState(false);
   const [openSidebar, setOpenSidebar] = useState(false);
 
   axios.get('data.json')
@@ -37,9 +38,15 @@ const App = () => {
     setSelected({});
   };
 
+  const handleMarkerClick = (item) => {
+    setSelected(item);
+    setOpenInfo(true);
+  }
+
   const handleCloseInfo = () => {
+    setSelected({});
     setOpenInfo(false);
-  };
+  }
 
   const toggleDrawer = (status) => (event) => {
     setOpenSidebar(status);
@@ -82,7 +89,7 @@ const App = () => {
             margin: "10px",
           }}
         >
-          <IconButton onClick={() => setOpenInfo(true)}>
+          <IconButton onClick={() => setOpenWelcome(true)}>
             <Info />
           </IconButton>
         </Box>
@@ -98,16 +105,16 @@ const App = () => {
                   key={item.name}
                   name={item.name}
                   position={item.location}
-                  onClick={() => setSelected(item)}
+                  onClick={() => handleMarkerClick(item)}
                 // icon={"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"}
                 />
               );
             })}
-            {selected.location && (
+            {selected.location && openInfo && (
               <InfoWindow
                 position={selected.location}
                 clickable={true}
-                onCloseClick={() => setSelected({})}
+                onCloseClick={handleCloseInfo}
               >
                 <Box
                   sx={{
@@ -117,15 +124,15 @@ const App = () => {
                   <Typography sx={{ fontWeight: 'bold' }}>
                     {selected.name}
                   </Typography>
-                  <Typography>{selected.blurb}</Typography>
+                  <Typography>{selected.address}</Typography>
                   <Link underline="hover" onClick={() => setOpenDialog(true)}>Read More</Link>
                 </Box>
               </InfoWindow>
             )}
           </GoogleMap>
         </LoadScript>
-        <InfoBox handleClose={handleCloseInfo} open={openInfo} />
-        <DialogBox
+        <WelcomeDialog handleClose={() => setOpenWelcome(false)} open={openWelcome} />
+        <InfoDialog
           handleClose={handleClose}
           open={openDialog}
           selected={selected}
@@ -135,6 +142,7 @@ const App = () => {
           open={openSidebar}
           toggleDrawer={toggleDrawer}
           setOpenDialog={setOpenDialog}
+          setOpenInfo={setOpenInfo}
           setSelected={setSelected}
         />
       </Box>
