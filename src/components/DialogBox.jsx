@@ -4,9 +4,9 @@ import {
     DialogContent,
     Grid,
     IconButton,
-    Typography
+    Typography,
 } from "@mui/material";
-import { withStyles } from '@mui/styles';
+import { withStyles } from "@mui/styles";
 import { Close } from "@mui/icons-material";
 
 const styles = () => ({
@@ -55,9 +55,7 @@ export const DialogBox = withStyles(styles)(
 
 const CloseButton = withStyles(styles)(({ onClick, classes }) => {
     return (
-        <IconButton
-            onClick={onClick}
-        >
+        <IconButton onClick={onClick}>
             <Close className={classes.button} />
         </IconButton>
     );
