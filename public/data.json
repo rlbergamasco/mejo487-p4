@@ -1,20 +1,182 @@
 [
   {
-    "name": "Location 1",
+    "name": "Boldt Castle",
     "location": {
-      "lat": 35.90871,
-      "lng": -79.063032
+      "lat": 44.351280,
+      "lng": -75.900170
     },
-    "address": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "address": "1 Heart Island, Alexandria Bay, NY",
+    "description": "One of the best places to visit in New York, Boldt Castle is located on Heart Island in the Thousand Islands of the Saint Lawrence River. It was built in 1900 by hotel magnate George C. Boldt as a summer dream home for his wife. He hired 300 stonemasons, carpenters and artists to build the six-story 120-room structure that also features Italian gardens, a turreted powerhouse, a dovecote as well as the finest imported Italian marble, Oriental rugs and French silks money could buy. Construction was halted on the Rhineland-style home when his wife Louise died just three years later. It was left vacant and exposed to the elements for over 70 years. Today, restored and fitted with period furnishings, it’s open to visitors daily and accessible by tour boat.",
+    "image": "images/boldt.jpeg"
   },
   {
-    "name": "Location 2",
+    "name": "Fonthill Castle",
     "location": {
-      "lat": 35.90171,
-      "lng": -79.093032
+      "lat": 40.320250,
+      "lng": -75.120540
     },
-    "address": "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "description": "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "address": "525 E Court St, Doylestown, PA",
+    "description": "Fonthill Castle celebrated its centennial in 2012. Constructed by Henry Chapman Mercer, archaeologist, ceramist, anthropologist, scholar and antiquarian, as a home and museum for his collection of tiles and prints, most famously the Moravian tiles, it features 44 rooms, 32 stairwells, 18 fireplaces and 21 chimneys, all hewn from hand-mixed reinforced concrete in a blend of medieval, Byzantine and Gothic styles. Thousands of handcrafted ceramic tiles were inset throughout, including Mercer’s own Moravian-style tiles plus Persian, Chinese, Spanish, and Dutch productions he collected. Today the Bucks County estate serves as a museum with 900 American and European prints. An adjacent building, the Mercer Museum, houses a multitude of artifacts, including a Conestoga wagon and a whale boat.",
+    "image": "images/fonthill.jpeg"
+  },
+  {
+    "name": "Castello di Amorosa",
+    "location": {
+      "lat": 38.55879092025252, 
+      "lng": -122.54272061566733
+    },
+    "address": "4045 St Helena Hwy, Calistoga, CA",
+    "description": "It took 14 years to build this authentically-styled, 13th-century Tuscan castle using historically accurate medieval building techniques. It functions as a renowned winery in Calistoga and comes complete with a drawbridge, moat and a dungeon with a functional Renaissance-era iron maiden. Its frescoes in the Great Hall and Knights’ Chamber are hand-painted, with roughly 8,000 tons of Napa Valley stone hand-chiseled. The Hapsburg-era bricks, hand-forged nails, chandeliers and 500-year-old fireplace were all imported from Europe. The castle is open for tours, which include tastings, daily.",
+    "image": "images/amorosa.jpeg"
+  },
+  {
+    "name": "Bannerman Castle",
+    "location": {
+      "lat": 41.45554890236188,
+      "lng": -73.98873661598361
+    },
+    "address": "Pollepel Island, Newburgh, NY",
+    "description": "Bannerman Castle sits on a small, rocky island known as Pollepel, located about 50 miles north of New York City and just 1,000 feet from the eastern shore of the Hudson River. It was built in 1901 by Frank Bannerman, a Scottish immigrant who arrived in the U.S. at the age of three. In 1865, when he was just 14 years old, he founded his own company selling military surplus goods. It was his son David who spotted the island while canoeing and the family decided to buy it and construct a mock Scottish castle to use as an arsenal. The castle went through many developments, but in 1918, with the death of Bannerman, construction halted. Two years later, 200 pounds of shells and powder exploded, destroying a part of the complex, but the family continued to use it as their residence through the 1930s. A fire ultimately left it in ruins in 1969. Unfortunately, Bannerman Island is known to be very treacherous with a combination of dangerous wall conditions and buried hazards, though it is open seasonally on weekends for kayak and guided boat tours.",
+    "image": "images/bannerman.jpeg"
+  },
+  {
+    "name": "Lyndhurst Castle",
+    "location": {
+      "lat": 41.05416448720896,
+      "lng": -73.86716691218287
+    },
+    "address": "635 S Broadway, Tarrytown, NY",
+    "description": "This magnificent, romantic Gothic Revival mansion that overlooks the Hudson River was designed by Alexander Jackson Davis in 1838. The architectural brilliance of the residence is complemented by the surrounding park-like landscape featuring sweeping lawns, a rose garden and fernery as well as a wealth original decorative arts. Lyndhurst has been the home of a number of noteworthy residents such as former New York City mayor William Paulding and railroad tycoon Jay Gould. The castle is open for tours Friday through Monday.",
+    "image": "images/lyndhurst.jpeg"
+  },
+  {
+    "name": "Hammond Castle",
+    "location": {
+      "lat": 42.585893759977786,
+      "lng": -70.69313023128929
+    },
+    "address": "80 Hesperus Ave, Gloucester, MA",
+    "description": "John Hays Hammond, Jr., an American inventor who is largely credited as the “Father of the Radio Control,” built this modern-day Frankenstein castle on the rocky shores of the Atlantic between 1926 and 1929 to serve as his home and a museum for his collection of Renaissance, Roman and medieval art. The structure is a combination of 15th-, 16th- and 18th-century styles and features a great hall with elaborate rose windows and a pipe organ, indoor courtyard, dining room, library and secret passageways. Self-guided tours are available Tuesday through Sunday, along with special events for Halloween, Renaissance Fair fundraisers and psychic gatherings.",
+    "image": "images/hammond.jpeg"
+  },
+  {
+    "name": "Gillette Castle",
+    "location": {
+      "lat": 41.423195928194176, 
+      "lng": -72.4284692385378
+    },
+    "address": "67 River Rd, East Haddam, CT",
+    "description": "Sitting high atop a forested bluff overlooking the Connecticut River, Gillette Castle, was commissioned by William Hooker Gillette who famously played Sherlock Holmes on stage. Construction on the 24-room castle began in 1914 and took five years to complete, using a crew of 20 men along with the playwright’s own drafts and designs. Although it looks like a medieval fortress, inside the stone castle you’ll find built-in couches and elaborate hand-carved southern white oak woodwork, all thanks to the creative genius. There are a number of unusual features, personally designed by the actor himself, like strange doorknobs and locks as well as a system of hidden mirrors for surveying public rooms from the master bedroom. Gillette was a huge cat lover who reportedly had 17 felines – he paid tribute to them in the 60 or so images of cats throughout the castle.",
+    "image": "images/gillette.jpeg"
+  },
+  {
+    "name": "Grey Towers Castle",
+    "location": {
+      "lat": 40.09096406693472,
+      "lng": -75.16454636020482
+    },
+    "address": "450 S. Easton Rd, Glenside, PA",
+    "description": "Grey Towers Castle is on the register of National Historic Landmarks, acquired by Arcadia University in the suburbs north of Philadelphia. Built by sugar refining magnate William Welsh Harrison between 1893 and 1898, it was inspired by Northumberland, England’s Alnwick Castle, although it showcases the work of famed architect Horace Trumbauer’s eclectic style with its selection of a number of French influences, ranging from the Renaissance to Louis XV. Its 40 rooms feature gilded ceilings, ornamental paintings, tapestries and hand-carved walnut and mahogany woodwork as well as a Mirror Room and secret passages behind fireplaces. Self-guided tours can be taken when classes are in session.",
+    "image": "images/grey.jpeg"
+  },
+  {
+    "name": "Oheka Castle",
+    "location": {
+      "lat": 40.82876209706111,
+      "lng": -73.44820250251045
+    },
+    "address": "135 W Gate Dr, Huntington, NY",
+    "description": "The beautifully restored Oheka Castle, also known as the Otto Kahn Estate, is located on the North Shore of Long Island in New York. Built between 1914 and 1919, made up of 127 rooms and more than 109,000-square-feet, the price tag was a staggering $11 million – in today’s money that would be $110 million – not surprising considering that its millionaire financier original owner, Otto Herman Kahn is the man whose likeness inspired Mr. Monopoly. Kahn ultimately abandoned his private estate in the late 1970s. It sustained extensive damage from vandals, fires and neglect, but after a two-decade renovation, it was transformed into a luxury hotel.",
+    "image": "images/oheka.jpeg"
+  },
+  {
+    "name": "Loveland Castle",
+    "location": {
+      "lat": 39.28495826758802,
+      "lng": -84.26561120255842
+    },
+    "address": "12075 Shore Dr, Loveland, OH",
+    "description": "Loveland Castle, also known as Chateau Laroche, sits on the banks of the Miami River. Its construction began in 1929 by World War I veteran, medievalist and Boy Scout troop leader, Harry D. Andrews. As the story goes, while Harry was at war, he was declared dead from spinal meningitis but miraculously recovered only to return home and discover that his fiancé had married another man. So, he turned his attention to building the castle for his Boy Scout Troop in the style of those he’d visited in Europe. The architecture is a combination of German, French and English styles. It also houses a collection of weapons – and possibly a number of ghosts, including Harry himself, who died in a tragic accident at the castle in 1981. The castle can be visited daily from April through September, and on weekends between October and March.",
+    "image": "images/loveland.jpeg"
+  },
+  {
+    "name": "Biltmore Estate",
+    "location": {
+      "lat": 35.542628547207144,
+      "lng": -82.55244970398695
+    },
+    "address": "1 Lodge St, Asheville, NC",
+    "description": "Biltmore Estate has never been officially named “castle,” but as the largest privately-owned home in the nation, it’s often referred to as such. This former mansion of George Washington Vanderbilt is so big that it even has its own winery along with spectacular, manicured gardens, especially brilliant in the spring, across the 8,000-acre estate. The 250-room French chateau-style mansion features a bowling alley, 65 fireplaces, beautiful medieval tapestries and an immense library. You’ll need at least two hours to explore the house. Plan to spend an entire day if you want to visit the gardens and conservatory; farm with a petting zoo, old fashioned toys and farm equipment; and the winery, where you can take a tour, learn about the wine-making process and enjoy a tasting.",
+    "image": "images/biltmore.jpeg"
+  },
+  {
+    "name": "1892 Bishop’s Palace",
+    "location": {
+      "lat": 29.30325806811035,
+      "lng": -94.78218363802519
+    },
+    "address": "1402 Broadway Avenue J, Galveston, TX",
+    "description": "Bishop’s Palace, also known as Gresham’s Palace after its original owner, lawyer and railroad magnate Walter Gresham, is a grand Gilded Age Victorian castle that was named by the American Institute of Architects as one of the 100 most important buildings in America. Built from 1886 to 1892, it remains the grandest in all of Galveston, featuring a 40-foot octagonal mahogany stairwell, stained glass, Sienna marble columns, impressive fireplaces from around the world – including one lined with pure silver – and elaborate bronze dragon sculptures. This exquisite building is open for both guided and self-guided tours as well as special private tours.",
+    "image": "images/1892.jpeg"
+  },
+  {
+    "name": "Castle in the Clouds",
+    "location": {
+      "lat": 43.728572595949544,
+      "lng": -71.32199227357992
+    },
+    "address": "455 Old Mountain Rd, Moultonborough, NH",
+    "description": "The Castle in the Clouds, also known as Lucknow Estate was commissioned by millionaire shoe baron Thomas Plant. The mountaintop estate was built in 1914, towering into the sky in the Ossipee Mountain Range offering panoramic views of more than 6,300 private acres of lakes and woods. Focused on achieving harmony with nature, the arts and philosophy of artisanship are expressed through inventive handiwork like the kitchen’s jigsaw floor and stone walls, as well as several technological innovations like a brine fridge, central vacuuming system and a needle shower. The castle is open to visitors daily by taking a trolley up the mountain.",
+    "image": "images/clouds.jpeg"
+  },
+  {
+    "name": "Thornewood Castle",
+    "location": {
+      "lat": 47.129103363104655,
+      "lng": -122.55017081763896
+    },
+    "address": "8601 N Thorne Ln SW, Lakewood, WA",
+    "description": "A 500-year-old Elizabethan manor house was dismantled brick-by-brick, shipped all the way around Cape Horn to be incorporated into this stunning English Tudor Gothic castle that has stood on the banks of American Lake in Washington State for over a century. The property was a gift from Chester Thorne, one of the founders of the Port of Tacoma, to his wife Anna. The 54-room castle is a popular wedding venue, luxury B&B and was also used as the setting for Stephen King’s television miniseries, “Rose Red.” The best way to get a good look at this castle is to book a room for the night, though tours are occasionally open to the public.",
+    "image": "images/thornewood.jpeg"
+  },
+  {
+    "name": "Hearst Castle",
+    "location": {
+      "lat": 35.685434152279825,
+      "lng": -121.16820364499215
+    },
+    "address": "750 Hearst Castle Rd, San Simeon, CA",
+    "description": "Hearst Castle is one of America’s most well-known castles. Originally built in 1919 as a residence for newspaper mogul William Randolph Hearst, it was donated to the state of California in the 1970s. Since then, it’s been designated a state historical monument, becoming a favorite among architecture, antique and art lovers alike, attracting nearly one million visitors each year. The 115-room “Casa Grande” was inspired by a Spanish cathedral and is set upon 13 miles of breathtaking coastline across 250,000 acres. There are 127 acres of gardens, the legendary Neptune pool, a Roman pool and an extensive collection of museum-quality artwork. A variety of tours are open to the public on a daily basis – reserve in advance to avoid disappointment as they tend to fill quickly.",
+    "image": "images/hearst.jpeg"
+  },
+  {
+    "name": "Belvedere Castle",
+    "location": {
+      "lat": 40.77962515954484,
+      "lng": -73.96903551559818
+    },
+    "address": "79th Street, New York, NY",
+    "description": "Belvedere Castle, located in New York City’s famous Central Park, was named for the Italian phrase, “beautiful view,” offering park goers exactly that. Panoramic views, including the turtle pond and open-air Delacorte Theater, can be enjoyed from its two balconies. It was designed in 1865 by Calvert Vaux and Jacob Wrey Mould, as a purely ornamental sight, with its strong stone façade, grand turret and flag,but since 1919 the National Weather Service has used it as a weather tower. The castle also features a nature observatory.",
+    "image": "images/belvedere.jpeg"
+  },
+  {
+    "name": "Bishop Castle",
+    "location": {
+      "lat": 38.06169854171174,
+      "lng": -105.09452689095104
+    },
+    "address": "12705 CO-165, Rye, CO",
+    "description": "Bishop Castle, located in the San Isabel National Forest outside of Rye in southern Colorado, was started by Jim Bishop as a family cottage back in 1969. When neighbors commented that it looked like a castle, he decided to transform it into one and construction has continued ever since. For more than four decades now, Jim has continued building his castle single-handedly, with his goal to complete it before he dies. It features spiraling staircases that seem to lead to the clouds and stained-glass windows along its front wall, while a metallic dragon’s neck and head juts from the apex of the great hall. The dragon, made from recycled metal hospital trays, shoots fire from its gaping maw with the help of a burner from a hot air balloon. Future plans are said to include a moat, drawbridge, a balcony large enough to hold an orchestra, and even a roller coaster. The castle is open for visits daily during daylight hours and also includes a gift shop.",
+    "image": "images/bishop.jpeg"
+  },
+  {
+    "name": "Berkeley Castle",
+    "location": {
+      "lat": 39.70565434407374,
+      "lng": -78.26316555822483
+    },
+    "address": "276 Cacapon Rd, Berkeley Springs, WV",
+    "description": "This English-Norman castle, a National and West Virginia registered historical landmark, was built by wealthy businessman Colonel Samuel Taylor Suit between 1885 and 1891 in order to win the affections of a woman he fell in love with. Built of silica sandstone, each stone was hand-cut from the local area and carried to the site by horse and wagon. Unfortunately for Colonel Suit, who did get the girl, he died before it was completed. His will stipulated that in order to get his fortune, his wife Rosa had to make sure it was finished, so it was. Rosa squandered her wealth, ultimately losing the castle to public auction in 1909. It’s gone through a number of owners since then. Its most recent owner, Andrew Gosline, restored the castle to the magnificence of its glory days. While it’s not open for tours, it is available for weddings, fundraisers, private and corporate events.",
+    "image": "images/berkeley.jpeg"
   }
 ]

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Typography, Link, IconButton, Box, CssBaseline } from "@mui/material";
+import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles';
 import { Menu, Info } from "@mui/icons-material";
 import {
   GoogleMap,
@@ -9,6 +10,10 @@ import {
 } from "@react-google-maps/api";
 import { WelcomeDialog, InfoDialog, Sidebar } from "components";
 import axios from 'axios';
+import 'styles.css';
+
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
 
 const App = () => {
   const [locations, setLocations] = useState([]);
@@ -28,7 +33,7 @@ const App = () => {
     width: "100%",
   };
 
-  const defaultCenter = { lat: 35.9114, lng: -79.0481 };
+  const defaultCenter = { lat: 40.69742713625295, lng: -99.3309117900806 };
 
   const [center, setCenter] = useState(defaultCenter);
 
@@ -53,7 +58,7 @@ const App = () => {
   }
 
   return (
-    <React.Fragment>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box
         sx={{
@@ -96,7 +101,7 @@ const App = () => {
         <LoadScript googleMapsApiKey={process.env.REACT_APP_API_KEY}>
           <GoogleMap
             mapContainerStyle={mapStyles}
-            zoom={13}
+            zoom={4}
             center={center}
           >
             {locations.map((item) => {
@@ -146,7 +151,7 @@ const App = () => {
           setSelected={setSelected}
         />
       </Box>
-    </React.Fragment>
+    </ThemeProvider >
   );
 };
 
