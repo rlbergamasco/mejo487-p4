@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, Button, IconButton, Box, CssBaseline } from "@mui/material";
+import { Typography, Link, IconButton, Box, CssBaseline } from "@mui/material";
 import { Menu, Info } from "@mui/icons-material";
 import {
   GoogleMap,
@@ -130,17 +130,14 @@ const App = () => {
               >
                 <Box
                   sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
                     maxWidth: "300px",
                   }}
                 >
-                  <Typography variant="h6" align="center">
+                  <Typography sx={{ fontWeight: 'bold' }}>
                     {selected.name}
                   </Typography>
-                  <Typography align="center">{selected.blurb}</Typography>
-                  <Button onClick={() => setOpenDialog(true)}>Read More</Button>
+                  <Typography>{selected.blurb}</Typography>
+                  <Link underline="hover" onClick={() => setOpenDialog(true)}>Read More</Link>
                 </Box>
               </InfoWindow>
             )}

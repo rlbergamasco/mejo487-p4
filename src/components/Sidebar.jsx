@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Drawer, List, Divider, ListItem, Button, Typography } from '@mui/material';
+import { Box, Drawer, List, Divider, ListItem, Link, Typography } from '@mui/material';
 
 export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog, setSelected }) => {
 
@@ -10,7 +10,7 @@ export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog, setSelec
 
     const list = (
         <Box
-            sx={{ width: 400 }}
+            sx={{ maxWidth: 400 }}
             role="presentation"
             onClick={toggleDrawer(false)}
         >
@@ -22,7 +22,7 @@ export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog, setSelec
                             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                 <Typography variant="h6">{item.name}</Typography>
                                 <Typography>{item.blurb}</Typography>
-                                <Button onClick={() => handleClick(item)}>Read More</Button>
+                                <Link underline="hover" onClick={() => handleClick(item)}>Read More</Link>
                             </Box>
                         </ListItem>
                         {index !== locations.length - 1 ? <Divider /> : null}
