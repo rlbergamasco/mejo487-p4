@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Typography, Link, IconButton, Box, CssBaseline } from "@mui/material";
 import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles';
 import { Menu, Info } from "@mui/icons-material";
@@ -18,6 +18,7 @@ theme = responsiveFontSizes(theme);
 const App = () => {
   const [locations, setLocations] = useState([]);
   const [selected, setSelected] = useState({});
+  const [selectedIdx, setSelectedIdx] = useState(1);
   const [openWelcome, setOpenWelcome] = useState(true);
   const [openDialog, setOpenDialog] = useState(false);
   const [openInfo, setOpenInfo] = useState(false);
@@ -56,6 +57,19 @@ const App = () => {
     setSelected({});
     setOpenInfo(false);
   }
+
+  const changeSelectedIdx = (amount) => {
+    setSelectedIdx(selectedIdx + amount);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  useEffect(() => {
+    setSelected(locations.find(e => e.index === selectedIdx) ? locations.find(e => e.index === selectedIdx) : {});
+  }, [selectedIdx]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -140,6 +154,7 @@ const App = () => {
         <InfoDialog
           handleClose={handleClose}
           open={openDialog}
+          changeSelectedIdx={changeSelectedIdx}
           selected={selected}
         />
         <Sidebar

@@ -1,5 +1,6 @@
 [
   {
+    "index": 1,
     "name": "Boldt Castle",
     "location": {
       "lat": 44.351280,
@@ -10,6 +11,7 @@
     "image": "images/boldt.jpeg"
   },
   {
+    "index": 2,
     "name": "Fonthill Castle",
     "location": {
       "lat": 40.320250,
@@ -20,6 +22,7 @@
     "image": "images/fonthill.jpeg"
   },
   {
+    "index": 3,
     "name": "Castello di Amorosa",
     "location": {
       "lat": 38.55879092025252, 
@@ -30,6 +33,7 @@
     "image": "images/amorosa.jpeg"
   },
   {
+    "index": 4,
     "name": "Bannerman Castle",
     "location": {
       "lat": 41.45554890236188,
@@ -40,6 +44,7 @@
     "image": "images/bannerman.jpeg"
   },
   {
+    "index": 5,
     "name": "Lyndhurst Castle",
     "location": {
       "lat": 41.05416448720896,
@@ -50,6 +55,7 @@
     "image": "images/lyndhurst.jpeg"
   },
   {
+    "index": 6,
     "name": "Hammond Castle",
     "location": {
       "lat": 42.585893759977786,
@@ -60,6 +66,7 @@
     "image": "images/hammond.jpeg"
   },
   {
+    "index": 7,
     "name": "Gillette Castle",
     "location": {
       "lat": 41.423195928194176, 
@@ -70,6 +77,7 @@
     "image": "images/gillette.jpeg"
   },
   {
+    "index": 8,
     "name": "Grey Towers Castle",
     "location": {
       "lat": 40.09096406693472,
@@ -80,6 +88,7 @@
     "image": "images/grey.jpeg"
   },
   {
+    "index": 9,
     "name": "Oheka Castle",
     "location": {
       "lat": 40.82876209706111,
@@ -90,6 +99,7 @@
     "image": "images/oheka.jpeg"
   },
   {
+    "index": 10,
     "name": "Loveland Castle",
     "location": {
       "lat": 39.28495826758802,
@@ -100,6 +110,7 @@
     "image": "images/loveland.jpeg"
   },
   {
+    "index": 11,
     "name": "Biltmore Estate",
     "location": {
       "lat": 35.542628547207144,
@@ -110,6 +121,7 @@
     "image": "images/biltmore.jpeg"
   },
   {
+    "index": 12,
     "name": "1892 Bishop’s Palace",
     "location": {
       "lat": 29.30325806811035,
@@ -120,6 +132,7 @@
     "image": "images/1892.jpeg"
   },
   {
+    "index": 13,
     "name": "Castle in the Clouds",
     "location": {
       "lat": 43.728572595949544,
@@ -130,6 +143,7 @@
     "image": "images/clouds.jpeg"
   },
   {
+    "index": 14,
     "name": "Thornewood Castle",
     "location": {
       "lat": 47.129103363104655,
@@ -140,6 +154,7 @@
     "image": "images/thornewood.jpeg"
   },
   {
+    "index": 15,
     "name": "Hearst Castle",
     "location": {
       "lat": 35.685434152279825,
@@ -150,6 +165,7 @@
     "image": "images/hearst.jpeg"
   },
   {
+    "index": 16,
     "name": "Belvedere Castle",
     "location": {
       "lat": 40.77962515954484,
@@ -160,6 +176,7 @@
     "image": "images/belvedere.jpeg"
   },
   {
+    "index": 17,
     "name": "Bishop Castle",
     "location": {
       "lat": 38.06169854171174,
@@ -170,6 +187,7 @@
     "image": "images/bishop.jpeg"
   },
   {
+    "index": 18,
     "name": "Berkeley Castle",
     "location": {
       "lat": 39.70565434407374,

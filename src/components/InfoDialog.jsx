@@ -1,10 +1,14 @@
+import React, { useState } from 'react';
 import {
     Dialog,
     DialogTitle,
     DialogContent,
+    DialogActions,
     Grid,
     IconButton,
     Typography,
+    Button,
+    Box,
 } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import { Close } from "@mui/icons-material";
@@ -20,12 +24,23 @@ const styles = () => ({
     },
     paper: {
         width: "890px",
-        height: "1000px",
+        height: "1500px",
     },
 });
 
 export const InfoDialog = withStyles(styles)(
-    ({ handleClose, selected, open, classes }) => {
+    ({ handleClose, selected, changeSelectedIdx, open, classes }) => {
+        const [isLoading, setIsLoading] = useState(false);
+
+        const handleClick = (amount) => {
+            changeSelectedIdx(amount);
+            setIsLoading(true);
+            const timeout = setTimeout(() => {
+                setIsLoading(false);
+            }, 1)
+            return () => clearTimeout(timeout);
+        }
+
         return (
             <Dialog
                 onClose={handleClose}
@@ -43,17 +58,28 @@ export const InfoDialog = withStyles(styles)(
                     </Grid>
                 </DialogTitle>
                 <DialogContent>
-                    <Typography variant="h2" align="center">
-                        {selected.name}
-                    </Typography>
-                    <Typography align="center">
-                        {selected.address}
-                    </Typography>
-                    <img src={selected.image} alt={selected.name} />
-                    <Typography>
-                        {selected.description}
-                    </Typography>
+                    {isLoading ?
+                        <Box height="100%" display="flex" justifyContent="center" alignItems="center" />
+                        :
+                        <React.Fragment>
+                            <Typography variant="h2" align="center">
+                                {selected.name}
+                            </Typography>
+                            <Typography align="center">
+                                {selected.address}
+                            </Typography>
+                            <img src={selected.image} alt={selected.name} />
+                            <Typography>
+                                {selected.description}
+                            </Typography>
+                        </React.Fragment>
+                    }
                 </DialogContent>
+                <DialogActions>
+                    {selected.index > 1 ? <Button onClick={() => handleClick(-1)}>Previous</Button> : null}
+                    <Box display="flex" flexGrow={1} />
+                    {selected.index < 18 ? <Button onClick={() => handleClick(1)}>Next</Button> : null}
+                </DialogActions>
             </Dialog>
         );
     }
