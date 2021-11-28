@@ -69,7 +69,7 @@ const App = () => {
 
   useEffect(() => {
     setSelected(locations.find(e => e.index === selectedIdx) ? locations.find(e => e.index === selectedIdx) : {});
-  }, [selectedIdx]);
+  }, [selectedIdx, locations]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -125,7 +125,7 @@ const App = () => {
                   name={item.name}
                   position={item.location}
                   onClick={() => handleMarkerClick(item)}
-                // icon={"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"}
+                  icon="images/castle-icon.png"
                 />
               );
             })}
