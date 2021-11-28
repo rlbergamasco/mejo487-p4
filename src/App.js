@@ -8,37 +8,18 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 import { InfoBox, DialogBox, Sidebar } from "components";
+import axios from 'axios';
 
 const App = () => {
+  const [locations, setLocations] = useState([]);
   const [selected, setSelected] = useState({});
   const [openInfo, setOpenInfo] = useState(true);
   const [openDialog, setOpenDialog] = useState(false);
   const [openSidebar, setOpenSidebar] = useState(false);
 
-  const locations = [
-    {
-      name: "Location 1",
-      location: {
-        lat: 35.90871,
-        lng: -79.063032,
-      },
-      blurb:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-    {
-      name: "Location 2",
-      location: {
-        lat: 35.90171,
-        lng: -79.093032,
-      },
-      blurb:
-        "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      description:
-        "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-  ];
+  axios.get('data.json')
+    .then(res => setLocations(res.data))
+    .catch(err => console.log(err));
 
   const mapStyles = {
     display: "flex",
