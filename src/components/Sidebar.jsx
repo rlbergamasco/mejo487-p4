@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Drawer, List, Divider, ListItem, Link, Typography } from '@mui/material';
 
-export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog, setOpenInfo, setSelected }) => {
+export const Sidebar = ({ locations, open, setOpenSidebar, setOpenDialog, setOpenInfo, setSelected }) => {
 
     const handleClick = (selected) => {
         setSelected(selected);
@@ -13,7 +13,7 @@ export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog, setOpenI
         <Box
             sx={{ maxWidth: 400 }}
             role="presentation"
-            onClick={toggleDrawer(false)}
+            onClick={() => setOpenSidebar(false)}
         >
             <List>
                 {locations.map((item, index) => (
@@ -37,7 +37,7 @@ export const Sidebar = ({ locations, open, toggleDrawer, setOpenDialog, setOpenI
         <Drawer
             anchor='right'
             open={open}
-            onClose={toggleDrawer(false)}
+            onClose={() => setOpenSidebar(false)}
         >
             {list}
         </Drawer>

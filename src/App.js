@@ -28,10 +28,9 @@ const App = () => {
     width: "100%",
   };
 
-  const defaultCenter = {
-    lat: 35.9114,
-    lng: -79.0481,
-  };
+  const defaultCenter = { lat: 35.9114, lng: -79.0481 };
+
+  const [center, setCenter] = useState(defaultCenter);
 
   const handleClose = () => {
     setOpenDialog(false);
@@ -43,14 +42,15 @@ const App = () => {
     setOpenInfo(true);
   }
 
+  const handleMenuClick = () => {
+    setOpenSidebar(true);
+    setOpenInfo(false);
+  }
+
   const handleCloseInfo = () => {
     setSelected({});
     setOpenInfo(false);
   }
-
-  const toggleDrawer = (status) => (event) => {
-    setOpenSidebar(status);
-  };
 
   return (
     <React.Fragment>
@@ -74,7 +74,7 @@ const App = () => {
             margin: "10px",
           }}
         >
-          <IconButton onClick={toggleDrawer(true)}>
+          <IconButton onClick={handleMenuClick}>
             <Menu />
           </IconButton>
         </Box>
@@ -97,7 +97,7 @@ const App = () => {
           <GoogleMap
             mapContainerStyle={mapStyles}
             zoom={13}
-            center={defaultCenter}
+            center={center}
           >
             {locations.map((item) => {
               return (
@@ -140,7 +140,7 @@ const App = () => {
         <Sidebar
           locations={locations}
           open={openSidebar}
-          toggleDrawer={toggleDrawer}
+          setOpenSidebar={setOpenSidebar}
           setOpenDialog={setOpenDialog}
           setOpenInfo={setOpenInfo}
           setSelected={setSelected}
