@@ -23,6 +23,15 @@ const App = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const [openInfo, setOpenInfo] = useState(false);
   const [openSidebar, setOpenSidebar] = useState(false);
+  const zoom = () => {
+    if (window.innerWidth < 400) {
+      return 3;
+    } else if (window.innerWidth < 1250) {
+      return 4;
+    } else {
+      return 5;
+    }
+  }
 
   axios.get('data.json')
     .then(res => setLocations(res.data))
@@ -34,7 +43,7 @@ const App = () => {
     width: "100%",
   };
 
-  const defaultCenter = { lat: 40.69742713625295, lng: -99.3309117900806 };
+  const defaultCenter = { lat: 39.936735262817066, lng: -97.68019476129098 };
 
   const [center, setCenter] = useState(defaultCenter);
 
@@ -115,7 +124,7 @@ const App = () => {
         <LoadScript googleMapsApiKey={process.env.REACT_APP_API_KEY}>
           <GoogleMap
             mapContainerStyle={mapStyles}
-            zoom={4}
+            zoom={zoom()}
             center={center}
           >
             {locations.map((item) => {
