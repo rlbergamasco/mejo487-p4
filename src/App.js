@@ -135,10 +135,10 @@ const App = () => {
                     maxWidth: "300px",
                   }}
                 >
-                  <Typography sx={{ fontWeight: 'bold' }}>
+                  <Typography variant="h6">
                     {selected.name}
                   </Typography>
-                  <Typography>{selected.address}</Typography>
+                  {selected.address.split('\n').map((line, i) => <Typography key={i}>{line}</Typography>)}
                   <Link underline="hover" onClick={() => setOpenDialog(true)}>Read More</Link>
                 </Box>
               </InfoWindow>

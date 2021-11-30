@@ -34,7 +34,7 @@ export const InfoDialog = withStyles(styles)(
                 maxWidth="md"
                 classes={{ paper: classes.paper }}
             >
-                <DialogTitle disableTypography className={classes.root} sx={{ padding: '12px 16px' }}>
+                <DialogTitle className={classes.root} sx={{ padding: '12px 16px' }}>
                     <Grid container direction="row" alignItems="center">
                         <Grid item style={{ display: "flex", flexGrow: 1 }} />
                         <Grid item>
@@ -46,9 +46,10 @@ export const InfoDialog = withStyles(styles)(
                     <Typography variant="h2" align="center">
                         {selected.name}
                     </Typography>
-                    <Typography align="center">
-                        {selected.address}
-                    </Typography>
+                    {selected.address ?
+                        selected.address.split('\n')
+                            .map((line, i) => <Typography key={i} align="center">{line}</Typography>)
+                        : null}
                     <img src={selected.image} alt={selected.name} />
                     <Typography>
                         {selected.description}

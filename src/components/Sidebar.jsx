@@ -19,10 +19,9 @@ export const Sidebar = ({ locations, open, setOpenSidebar, setOpenDialog, setOpe
                 {locations.map((item, index) => (
                     <React.Fragment key={item.name}>
                         <ListItem >
-                            {/* <ListItemText primary={item.name} /> */}
                             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                 <Typography variant="h6">{item.name}</Typography>
-                                <Typography>{item.address}</Typography>
+                                {item.address.split('\n').map((line, i) => <Typography key={i}>{line}</Typography>)}
                                 <Link underline="hover" onClick={() => handleClick(item)}>Read More</Link>
                             </Box>
                         </ListItem>
